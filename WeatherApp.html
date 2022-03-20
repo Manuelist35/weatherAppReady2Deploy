@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="WeatherApp.css">
+    <!-----Bootstrap------>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>WeatherApp</title>
+</head>
+<body>
+
+    <div class="container">
+<!---------------------------------------------   Current Info Section   ------------------------------------------------------------>       
+        <div class="current-info">
+
+            <div class="date-container">
+                <div class="time" id="time">
+                    12:30 <span id="am-pm">PM</span>
+                </div>
+                <div class="date" id="date">
+                    Monday, 24 May
+                </div>
+
+                <div class="others" id="current-weather-items">
+                    
+                </div>
+            </div>
+<!---------------------------------------------   Country Section   ------------------------------------------------------------>
+            <div class="place-container">
+                 <div class="time-zone" id="time-zone">Welcome to the Weather App</div>
+                 <div id="country" class="country">CAN</div>
+                 <div class="city-by-location">
+                     <p>Search city by location</p>
+                 </div>
+                 <div class="row">
+                    <div class="col-md-12">
+                        <form>
+                            <div class="mb-3">
+                              <label for="userID" class="form-label">City Name</label>
+                              <input type="text" class="form-control" id="CityName" aria-describedby="userID">
+                              <div id="emailHelp" class="form-text">Please insert the city that you are looking for</div>
+                            </div>
+                            <button class="btn btn-primary" id="searchCity">Search </button> <!--TODO: Call the listRepository function using onclick with a callback functin-->
+                          </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!---------------------------------------------   Future forecast Section   ------------------------------------------------------------>  
+    <div class="future-forecast">
+        <div class="today" id="current-temp">
+            <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon" class="w-icon">
+            <div class="others">
+                <div class="day">Monday</div>
+                <div class="temp">Night - 25.6&#176; C</div>
+                <div class="temp">Day - 35.6&#176; C</div> 
+            </div> 
+        </div>
+        <div class="weather-forecast" id="weather-forecast">
+            <div class="weather-forecast-item">
+                <div class="day">Tuesday</div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon" class="w-icon">
+                <div class="temp">Night - 25.6&#176; C </div>
+                <div class="temp">Day - 35.6&#176; C </div>   
+            </div>
+            <div class="weather-forecast-item">
+                <div class="day">Wednesday</div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon" class="w-icon">
+                <div class="temp">Night - 25.6&#176; C </div>
+                <div class="temp">Day - 35.6&#176; C </div>   
+            </div>
+            <div class="weather-forecast-item">
+                <div class="day">Thursday</div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon" class="w-icon">
+                <div class="temp">Night - 25.6&#176; C </div>
+                <div class="temp">Day - 35.6&#176; C </div>   
+            </div>
+            <div class="weather-forecast-item">
+                <div class="day">Friday</div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon" class="w-icon">
+                <div class="temp">Night - 25.6&#176; C </div>
+                <div class="temp">Day - 35.6&#176; C </div>   
+            </div>
+            <div class="weather-forecast-item">
+                <div class="day">Saturday</div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon" class="w-icon">
+                <div class="temp">Night - 25.6&#176; C </div>
+                <div class="temp">Day - 35.6&#176; C </div>   
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="WeatherApp.js"></script>
+</body>
+</html>
